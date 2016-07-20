@@ -10,7 +10,7 @@ RUN chmod +x /*.sh && \
 	locale-gen en_US.UTF-8 && \
 	export LANG=en_US.UTF-8 && \
 	add-apt-repository -y ppa:ondrej/php && \
-	add-apt-repository -y ppa:ondrej/apache2 && \
+	add-apt-repository -y ppa:ondrej/apache2
 RUN DEBIAN_FRONTEND=noninteractive && apt-get update && \
 	apt-get -y upgrade && \
 	apt-get install -y apache2 php7.0 php7.0-common php7.0-json php7.0-opcache php5.6-zip php7.0-mysql php7.0-phpdbg php7.0-gd php7.0-imap php7.0-ldap php7.0-pgsql php7.0-pspell php7.0-recode php7.0-tidy php7.0-dev php7.0-intl php7.0-curl php7.0-mcrypt php7.0-xmlrpc php7.0-xsl php7.0-bz2 php7.0-mbstring pkg-config libmagickwand-dev imagemagick build-essential && \
