@@ -17,7 +17,7 @@ RUN DEBIAN_FRONTEND=noninteractive && apt-get update && \
 	echo 'autodetect'|pecl install imagick && \
 	echo "extension=imagick.so" | sudo tee /etc/php/7.2/mods-available/imagick.ini && \
 	ln -sf /etc/php/7.2/mods-available/imagick.ini /etc/php/7.2/apache2/conf.d/20-imagick.ini && \
-	ln -sf ../mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
+	ln -sf /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
 
 EXPOSE 80
 WORKDIR /var/www/html
