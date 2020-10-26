@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:18.04
 MAINTAINER ASCDC <asdc.sinica@gmail.com>
 
 ADD run.sh /run.sh
