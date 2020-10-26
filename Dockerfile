@@ -6,7 +6,7 @@ ADD run.sh /run.sh
 RUN chmod +x /*.sh && \
 	apt-get update && \
 	DEBIAN_FRONTEND=noninteractive && \
-	apt-get install -yyq tzdata locales locales locales-all dumb-init software-properties-common openssh-server && \
+	apt-get install -yyq tzdata locales locales locales-all dumb-init software-properties-common openssh-server  && \
 	ln -fs /usr/share/zoneinfo/Asia/Taipei /etc/localtime && \
 	dpkg-reconfigure --frontend noninteractive tzdata && \
 	echo "locales locales/default_environment_locale select zh_TW.UTF-8" | debconf-set-selections && \
