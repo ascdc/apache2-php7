@@ -2,6 +2,7 @@ FROM ubuntu:18.04
 MAINTAINER ASCDC <asdc.sinica@gmail.com>
 
 ADD run.sh /run.sh
+ADD set_root_pw.sh /set_root_pwd.sh
 
 RUN chmod +x /*.sh && \
 	apt-get update && \
